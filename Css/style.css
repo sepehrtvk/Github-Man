@@ -175,3 +175,26 @@ body {
   font-weight: bold;
   color: #fff;
 }
+
+/* responsive desinfg */
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .margin-left {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+  .box {
+    height: fit-content;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  body {
+    padding-top:14rem ;
+    padding-bottom:14rem ;
+  }
+}
