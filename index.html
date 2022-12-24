@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Man</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Css/style.css" />
+    <link rel="icon" type="image/png" href="/Assets/github.png" />
+  </head>
+  <body>
+    <!-- main container -->
+    <div class="container">
+      <div class="alert-container">
+        <p class="alert-message"></p>
+      </div>
+      <!-- left box -->
+      <div class="box left-box">
+        <h2>Profile</h2>
+        <div class="profile-container">
+          <div class="flex-container">
+            <div>
+              <img src="" alt="profile-photo" class="profile-photo" />
+            </div>
+            <div>
+              <p id="profile-name"></p>
+              <p id="profile-blog"></p>
+              <p id="profile-adderes"></p>
+            </div>
+          </div>
+          <div>
+            <p id="profile-bio"></p>
+          </div>
+        </div>
+        <div class="loading-container">
+          <div id="loading"></div>
+        </div>
+      </div>
+      <!-- right box -->
+      <div class="box margin-left">
+        <h2>Github Search</h2>
+        <form>
+          <div class="inputBox">
+            <input
+              type="text"
+              name="text"
+              id="text_input"
+              required
+              onkeyup="this.setAttribute('value', this.value);"
+              value=""
+            />
+            <label>Username</label>
+          </div>
+          <input id="submit_btn" type="submit" name="sign-in" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="/Javascript/script.js"></script>
+</html>

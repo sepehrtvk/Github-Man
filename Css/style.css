@@ -1,0 +1,177 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* overal body global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("/Assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Lato", sans-serif;
+}
+
+/* left and right box styles */
+.box {
+  height: 28rem;
+  padding: 3.5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.625rem;
+  text-align: center;
+}
+
+.left-box {
+  width: fit-content;
+}
+/* box heading style */
+.box h2 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  padding-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}
+
+.box .inputBox {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem;
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #03a9f4;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
+}
+/* spinner loading styles */
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+/* animation for loading spinner */
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+/* main container that contains 2 boxes with flex display */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.margin-left {
+  margin-left: 9rem;
+}
+/* profile section begins */
+.profile-container {
+  color: #fff;
+  display: none;
+}
+
+/* flex container with center alginment */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 6rem;
+}
+
+#profile-bio {
+  margin-top: 5rem;
+  margin-left: 10px;
+  text-align: left;
+}
+
+/* red alert box conatins error messages  */
+.alert-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 35px;
+  background-color: #d62323;
+  padding: 15px 200px 15px 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  border-radius: 16px;
+  transition: visibility 0s, opacity 0.7s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* error message styles inside the alert box */
+.alert-message {
+  font-weight: bold;
+  color: #fff;
+}
